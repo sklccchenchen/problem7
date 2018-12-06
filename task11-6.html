@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+   .left{
+   height:500px;
+   width:2px;
+   background:#94675d;
+   float:left;
+   }
+    .top{
+      width:1000px;
+      height:1px;
+      background:#e2e2e2;
+    }
+    .container{
+      width:600px;
+      height:100px;
+      background:#ccc;
+      margin:20px;
+      position:relative;
+    }
+    .container ul{
+      position:absolute;
+      top:10px;
+      left:50%;
+      margin-left:-150px;
+    /*   transform:translate(-50%) */
+    }
+    .container li{
+      list-style:none;
+      float:left;
+     
+    }
+    .container a{
+      color:#fff;
+      text-decoration:none;
+      padding:5px;
+      margin:5px;
+      border:1px solid red;
+      border-radius:2px;
+      display:inline-block;
+      background:red;
+    }
+  </style>
+</head>
+<body>
+  <div class="left frame"></div>
+  <div class="top frame"></div>
+<div class="container">
+  <ul>
+    <li><a href="#">按钮1</a></li>
+    <li><a href="#">按钮2</a></li>
+    <li><a href="#">按钮3</a></li>
+  </ul>
+</div>
+</body>
+</html>
