@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_948895_iqhwp72wwu.css">
+  <style>
+    
+    html,body{
+      height:100%;
+    }
+    html,
+    *{
+      margin:0;
+      padding:0;
+      line-height:1.5;
+    }
+    header{
+      height:100%;
+      position:relative;
+      background:#f00 url(https://i03picsos.sogoucdn.com/1b35751d9f1d320e) center center no-repeat;
+      background-size:cover;   
+    }
+ .clearfix::after{
+  content:'';
+  display:inline-block;
+  clear:both;
+}  
+    nav>ul{
+      list-style:none;
+      float:right;
+      margin:10px
+    }
+    nav li{
+      float:left;
+      margin:3px;
+    }
+    
+    
+    nav a{
+      text-decoration:none;
+      font-size:12px;
+      color:#fff;
+      padding:6px 10px;
+      background:#aaa;
+      border-radius:3px;
+      margin:10px
+    }
+    nav>a{
+       color:#f7ba3e;
+      margin:20px;
+     
+    }
+    nav a:hover{
+      background:#ffeb3b;
+    }
+    nav .logo{
+      float:left;
+      font-size:40px;
+      font-family:STXingkai;
+      background:none;
+     
+    }
+    header .container{
+      display:inline-block;
+      text-align:center;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%)
+    }
+    header h1{
+      font-size:30px;
+      color:red;
+    }
+    header p{
+      font-size:50px;
+      margin:20px;
+    }
+    header button{
+      padding:5px;
+      font-size:20px;
+      display:inline-block;
+      background:#fed136;
+      border-radius:4px;
+    }
+    .layout{
+      width:1200px;
+      margin:0 auto;
+    }
+      main .part1{
+    text-align:center;
+    width:100%;
+    }
+    .part1>h1{
+      font-size:50px;
+      margin-top:50px;
+    }
+    .part1>p{
+      width:800px; 
+      padding-top:30px;
+      margin:0 auto;
+    }
+    .part1>ul h1{
+      font-size:20px
+    }
+    .part1>ul p{
+      font-size:13px;
+      color:#888;
+    }
+    .part1 .iconfont{
+      font-size:80px;
+      display:inline-block;
+      border:1px solid #fed136;
+      border-top:100px;
+      border-left:100px;
+      border-right:100px;
+      border-bottom:100px;
+      background:#fed136;
+      border-radius:50px; 
+    }
+    section .part1 li{
+      width:calc(33.33% - 80px);
+      display:inline-block;
+      list-style:none;
+      padding:20px;
+      margin-top:200px;
+    }
+    @media screen and (max-width:850px){
+      .part1 li{
+        width:100%;
+      }
+    } 
+    .equip{
+      width:100%;
+      display:block;
+    }
+      .equip a{
+        /* width:calc(33.333% - 20px); */
+        width:100%;
+        height:300px;
+        margin:10px;
+        border:1px solid rgba(0,0,0,0);
+        display:inline-block;
+      }
+      .equip a:hover{
+        background:rgba(0,0,255,0.5);
+      }
+    .equip figure{
+      width:calc(33.333% - 40px);
+      display:inline-block;
+      margin:20px;
+      float:left;
+      background:#f7f7f7;
+      }
+      .equip figure figcaption{
+        padding:10px;
+      }
+    }
+    .equip img{
+      width:100%;
+      height:100%;
+    }  
+    .equip{
+      background:#f7f7f7;
+      margin-top:80px;
+    }
+    section3 .timeaxis li{
+      border:1px solid rgba(0,0,0,0);
+      margin-top:50px;
+      position:relative;
+    }
+  section3 .timeaxis li:nth-child(even) img{
+    float:right;
+    width:100px;
+    height:100px;
+    border：3px solid #fff;
+    border-radius:50%;
+  }
+  section3 .timeaxis li:nth-child(even){
+    list-style:none;
+    padding-right:calc(50% - 50px);
+  }
+  section3 .timeaxis li:nth-child(odd) img{
+    float:left;
+    width:100px;
+    height:100px;
+    border：3px solid #fff;
+    border-radius:50%;
+  }
+  section3 .timeaxis li:nth-child(odd){
+    list-style:none;
+    padding-left:calc(50% - 50px);
+  }
+   /* section3 .timeaxis li  dl:first-child{
+    font-size:20px;
+  } */
+  /* section3 .timeaxis li:nth-child(even) dl{
+    float:right; */ */
+    section3 .timeaxis li:before{
+      content:'';
+      position:absolute;
+      left:50%;
+      top:100px;
+      display:inline-block;
+      width:4px;
+      height:60px;
+      background-color:#666;
+      margin-left:0px;
+    }
+    section3 .timeaxis li dt{
+      font-size:20px;
+    }
+    section4 .style1{
+      /* width:1000px; */
+      /* display:inline-block; */
+      text-align:center;
+      position:relative;
+
+    }
+    section4 input{
+      background:#fff;
+    }
+    section4 .style1 h1{
+      font-size: 30px;
+      margin-top:40px;
+    }
+    section4 .style1 p{
+      font-size:14px;
+      padding:20px;
+      margin-bottom: 50px;
+  
+    }
+    section4 .information{
+      width:1500px;
+      margin:0 auto;
+    }
+    section4 .information input{
+      width:calc(50% - 20px);
+      height:40px;
+      display:block;
+      margin-top:30px;
+      border-radius: 3px;
+      
+    }
+    section4 .detailed{
+      width:calc(50% - 120px);
+      height:180px;
+      border-radius:4px;
+      position:absolute;
+      top:160px;
+      left:calc(50% + 20px);
+     
+    } 
+    section4 a{
+      font-size:20px;
+      color:#fff;
+      padding:10px;
+      display:inline-block;
+      background:#fed136;
+      opacity: 0.6;
+      margin-top:50px;
+      text-decoration: none;
+      border-radius:5px;
+      margin-bottom: 50px;
+    }
+    section4 a:hover{
+       background:#fed136;
+    }
+    section4 .style1 {
+      background:#f7f7f7;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="layout">
+      <a href="#" class="logo  clearfix">SKLCC</a>
+      <ul class="navbar clearfix">
+        <li><a href="#">INTRODUCTION</a></li>
+        <li><a href="#">TEAM</a></li>
+        <li><a href="#">ACHIEVEMENT</a></li>
+        <li><a href="#">MORE</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="container layout">
+      <h1>Welcome To Our Laboratory</h1>
+      <p>IT'S NICE TO MEET YOU</p>
+      <button>TELL ME MORE</button>
+    </div>
+  
+  </header>
+  <main>
+    <section>
+      <div class="container part1">
+      <h1>Introdution and Team</h1>
+      <p>煤燃烧国家重点实验室立足国家能源生产与环境保护的重大需求，
+       致力于以煤为代表的化石燃料和以生物质为代表的可再生燃料的燃烧和转化过程、及其污染物生成规律和控制方
+      法的应用基础研究。</p>
+      <ul class="clearfix">
+        <li>
+          <span class="iconfont icon-keyan"></span>
+          <h1>流动传热研究团队</h1>
+          <p>跨尺度非平衡输运现象是能源、环境、化工、材料等领域的共性基础问题，
+            也是能源清洁高效利用、新能源开发、航空航天等国家重大需求的共性关键科学问题</p>
+        </li>
+        <li><span class="iconfont icon-keyanrenyuan"></span>
+           <h1>燃煤污染物超净排放研究团队</h1>
+          <p>本研究团队坚持微观与宏观研究相结合，坚持理论
+            研究与工程实践相结合，坚持实验研究与数值计算相结合</p>
+        </li>
+        <li><span class="iconfont icon-keyanxitong"></span>
+            <h1>洁净燃烧理论与技术研究团队</h1>
+          <p>洁净燃烧理论与技术团队旨在耦合洁净燃
+            烧理论与高效低污染燃烧技术，实现燃烧的清洁高效化</p>
+        </li>
+      </ul>
+    </div>
+    </section>
+    <section2>
+    <div class="container part1 equip clearfix">
+      <h1>MAIN EQUIPMENT</h1>
+      <p>Complete instrumentation and large benches</p>
+      <!-- <div class="equip"> -->
+        <figure>
+          <a href="#"><img src="http://sklcc.hust.edu.cn/__local/F/B9/EE/78291FB37B700FB9CE0B24630EF_11CBEF41_6841.jpg" alt=""></a>
+          <figcaption>便携气相色谱分析仪</figcaption>     
+        </figure>
+        <figure>
+          <a href="#"><img src="http://sklcc.hust.edu.cn/__local/C/51/3A/CF40A79ACFDA1019C8732EA38B0_37D40674_3756D.png" alt=""></a>
+          <figcaption>便携气相色谱分析仪</figcaption>  
+        </figure>
+        <figure>
+          <a href="#"><img src="http://sklcc.hust.edu.cn/__local/F/51/CC/91EACCEA9ACD99F6FECB5EC99DB_13B57F3B_99D5.jpg" alt=""></a>
+          <figcaption>便携气相色谱分析仪</figcaption>  
+        </figure> 
+        <figure>
+          <a href="#"><img src="http://sklcc.hust.edu.cn/__local/F/53/C5/8E75271F540F182AE3D282EBCFC_8A1A1B4A_78EB.jpg" alt=""></a>
+          <figcaption>便携气相色谱分析仪</figcaption>  
+        </figure>
+        <figure>
+          <a href="#"><img src="http://sklcc.hust.edu.cn/__local/0/A8/DF/B2CF1B86E68F034F3F654AE82CE_32551647_2A56.jpg" alt=""></a>
+          <figcaption>便携气相色谱分析仪</figcaption>  
+        </figure>
+        <figure>
+          <a href="#"><img src="http://sklcc.hust.edu.cn/__local/F/FB/DD/DF0E81506B0FD34D085B3EA2FFD_3D8A6278_4A9A.jpg" alt=""></a>
+          <figcaption>便携气相色谱分析仪</figcaption>  
+        </figure>
+    </div>
+    </section2>
+    <section3>
+      <div class="container part1">
+      <h1>Major Achievement</h1>
+      <p>发表高水平学术论文1911篇（包括中文期刊论文497篇、英文期刊988篇、
+        中文会议221篇、国际会议205篇），其中SCI收录论文966篇、EI收录论文1279篇</p>
+      <ul class="timeaxis">
+        <li class="clearfix">
+          <img src="http://sklcc.hust.edu.cn/__local/7/38/26/B3791EA01174B89847928B3DC09_EE1E528A_5E2D.jpg">
+          <dl class="clearfix">
+            <dt>2013-J-217-2-03-R01</dt>
+            <dd>国家级科学技术进步奖</dd>
+            <dd>高效低耗流化床燃煤工业设备关键技术及应用</dd>
+          </dl>    
+        </li>
+        <li  class="clearfix">
+            <img src="http://sklcc.hust.edu.cn/__local/3/5B/4F/E3849E78DA311C4296C13826EB4_C839DFF2_3471.jpg">
+            <dl class="clearfix" >
+              <dt>2014-Z-109-2-03-R01</dt>
+              <dd>国家自然科学奖</dd>
+              <dd>基于离散体系的跨尺度多相反应流的介观理论和方法</dd>
+            </dl>  
+        </li>
+        <li  class="clearfix">
+          <img src="http://sklcc.hust.edu.cn/__local/2/F9/A5/F2A896AC659F692184EDDD3887B_96115709_458C.jpg">
+          <dl class="clearfix">
+            <dt>2014-J-217-2-03-R01</dt>
+            <dd>国家级科学技术进步奖</dd>
+            <dd>大型电站锅炉混煤燃烧理论方法及全过程优化技术</dd> 
+          </dl>
+        </li>
+        <li class="clearfix">
+          <img src="http://sklcc.hust.edu.cn/__local/1/E5/1E/26C7924CF478F4D3447449ABCFB_AC7531AB_1BB2.jpg" alt="">
+          <dl class="clearfix">
+            <dt>2016-F-30901-2-05-R02</dt>
+            <dd>国家技术发明奖</dd>
+            <dd>多界面光-热耦合白光LED封装优化技术</dd>          
+          </dl>
+        </li>
+      </ul>
+    </div>
+  <section4>
+    <div class="style1  clearfix">
+      <h1>Contact US</h1>
+      <p>welcome your opinion!</p>
+      <div class="information">
+          <input type="text" placeholder="YOUR NAME*">
+          <input type="text" placeholder="YOUR EMAIL*">
+          <input type="text" placeholder="YOUR PHONE*">
+        </div>
+        <input class="detailed" type="textarea" placeholder="YOUR MESSAGE*">
+      <a href="#" class="button">SEND MESSAGE</a>
+    </div>
+  </section4>  
+</main>
+<footer>  
+
+</footer>
+</body>
+</html>
